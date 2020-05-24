@@ -10,9 +10,8 @@ jobs:
         with:
           node-version: '12'
       - name: Prepare
-        run: npm ci
-        env:
-          CHROMEDRIVER_SKIP_DOWNLOAD: true
+        run: |
+          env CHROMEDRIVER_FILEPATH=$CHROMEWEBDRIVER npm ci
       - name: Lint
         run: npm run lint
       - name: Build
