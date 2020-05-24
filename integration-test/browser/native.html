@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover" />
+</head>
+<body>
+<form onsubmit="onSubmit(event)">
+  <label>
+    Input:
+    <input type="text" id="input">
+  </label>
+  <label>
+    Color:
+    <input type="text" id="color">
+  </label>
+  <label>
+    is BaseColor:
+    <input type="checkbox" id="is-base-color" value="true">
+  </label>
+  <button id="submit" type="submit">Submit</button>
+</form>
+<div>
+  <p>SVG</p>
+  <div id="output"></div>
+</div>
+<script type="text/javascript" src="/browser/native.js"></script>
+<script type="text/javascript">
+window.__result = { error: null, data: null };
+
+function onSubmit(e) {
+  e.preventDefault();
+
+  (async () => {
+    const inputEl = document.querySelector("#input");
+    const colorEl = document.querySelector("#color");
+    const isBaseColorEl = document.querySelector("#is-base-color");
+
+    const outputEl = document.querySelector("#output");
+
+    const input = inputEl.value;
+    const color = colorEl.value;
+    const isBaseColor = isBaseColorEl.checked;
+
+    const pattern = await (() => {
+      if (color && !isBaseColor) {
+        return geoPattern.generate({ input, color });
+      } else if (color && isBaseColor) {
+        return geoPattern.generate({ input, baseColor: color });
+      } else {
+        return geoPattern.generate({ input });
+      }
+    })();
+    const svg = pattern.toSVG();
+    outputEl.innerHTML = svg;
+    return svg;
+  })().then((result) => {
+    window.__result = { error: null, data: result };
+  }).catch((error) => {
+    window.__result = { error, data: null };
+  });
+}
+</script>
+</body>
+</html>

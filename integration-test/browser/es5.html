@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover" />
+</head>
+<body>
+<form onsubmit="onSubmit(event)">
+  <label>
+    Input:
+    <input type="text" id="input">
+  </label>
+  <label>
+    Color:
+    <input type="text" id="color">
+  </label>
+  <label>
+    is BaseColor:
+    <input type="checkbox" id="is-base-color" value="true">
+  </label>
+  <button id="submit" type="submit">Submit</button>
+</form>
+<div>
+  <p>SVG</p>
+  <div id="output"></div>
+</div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.6.5/core.min.js"></script>
+<script type="text/javascript" src="text-encoder-polyfill.js"></script>
+<script type="text/javascript" src="/browser/es5.js"></script>
+<script type="text/javascript">
+window.__result = { error: null, data: null };
+
+function onSubmit(e) {
+  e.preventDefault();
+
+  try {
+    (function () {
+      var inputEl = document.querySelector("#input");
+      var colorEl = document.querySelector("#color");
+      var isBaseColorEl = document.querySelector("#is-base-color");
+
+      var outputEl = document.querySelector("#output");
+
+      var input = inputEl.value;
+      var color = colorEl.value;
+      var isBaseColor = isBaseColorEl.checked;
+
+      (function() {
+        if (color && !isBaseColor) {
+          return geoPattern.generate({
+            input: input,
+            color: color,
+          });
+        } else if (color && isBaseColor) {
+          return geoPattern.generate({
+            input: input,
+            baseColor: color,
+          });
+        } else {
+          return geoPattern.generate({
+            input: input,
+          });
+        }
+      })().then(function(pattern) {
+        var svg = pattern.toSVG();
+        outputEl.innerHTML = svg;
+        return svg;
+      }).then(function (result) {
+        window.__result = { error: null, data: result };
+      }).catch(function(error) {
+        window.__result = { error: error, data: null };
+      });
+    })();
+  } catch (error) {
+    window.__result = { error: error, data: null };
+  }
+}
+</script>
+</body>
+</html>
