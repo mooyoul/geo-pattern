@@ -4,6 +4,7 @@ const { isCi } = require('env-ci')();
 const base = require('./wdio.base.conf');
 
 const chromeDriverOptions = isCi ? {
+  outputDir: 'output/chromedriver/',
   args: [
     '--headless',
     '--no-sandbox',
