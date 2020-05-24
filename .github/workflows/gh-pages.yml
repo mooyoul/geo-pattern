@@ -4,8 +4,9 @@ on:
     branches:
       - 'master'
     paths:
-      - 'package.json'
-      - 'examples/browser/**'
+      - '.github/workflows/gh-pages.yml' # on workflow configuration change
+      - 'package.json' # on package update
+      - 'examples/browser/**' # on example update
 jobs:
   job:
     runs-on: ubuntu-latest
@@ -27,10 +28,7 @@ jobs:
         working-directory: examples/browser
         run: npm run build:prod
       - name: Publish
-        run: |
-          rm -rf dist
-          cp -r examples/browser/dist docs
-          git add docs
-          git commit -m "Publish ${{ github.sha }} to gh-pages"
-          git push origin master
-
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: examples/browser/dist
