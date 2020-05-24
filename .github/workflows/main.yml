@@ -11,7 +11,7 @@ jobs:
           node-version: '12'
       - name: Prepare
         run: |
-          tree $CHROMEWEBDRIVER
+          ls -al $CHROMEWEBDRIVER
 #          env CHROMEDRIVER_FILEPATH=$CHROMEWEBDRIVER npm ci
 #      - name: Lint
 #        run: npm run lint
