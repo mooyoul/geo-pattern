@@ -3,16 +3,23 @@
 const { isCi } = require('env-ci')();
 const base = require('./wdio.base.conf');
 
-const chromeDriverOptions = isCi ? {
-  outputDir: 'output/chromedriver/',
-  args: [
-    '--headless',
-    '--no-sandbox',
-    '--disable-dev-shm-usage',
-    '--window-size=1024x768',
-    '--disable-gpu',
-  ],
-} : {};
+const { chromeDriverOptions, chromeOptions } = isCi ? {
+  chromeDriverOptions: {
+    outputDir: 'output/chromedriver/',
+  },
+  chromeOptions: {
+    args: [
+      '--headless',
+      '--no-sandbox',
+      '--disable-dev-shm-usage',
+      '--window-size=1024x768',
+      '--disable-gpu',
+    ],
+  }
+} : {
+  chromeDriverOptions: {},
+  chromeOptions: {},
+};
 
 exports.config = {
   ...base.config,
@@ -22,6 +29,7 @@ exports.config = {
     ['chromedriver', chromeDriverOptions],
   ],
   capabilities: [{
-    'browserName': 'chrome',
+    browserName: 'chrome',
+    chromeOptions,
   }],
 };
