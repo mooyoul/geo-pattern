@@ -1,5 +1,10 @@
 name: workflow
-on: push
+on:
+  push:
+    branches:
+      - '*'
+    paths-ignore:
+      - 'examples/**'
 jobs:
   job:
     runs-on: ubuntu-latest
