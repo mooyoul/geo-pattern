@@ -30,6 +30,7 @@ exports.config = {
   ],
   capabilities: [{
     browserName: 'chrome',
+    // @see https://github.com/webdriverio/webdriverio/issues/3238
     'goog:chromeOptions': chromeOptions,
   }],
 };
