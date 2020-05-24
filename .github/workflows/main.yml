@@ -11,16 +11,15 @@ jobs:
           node-version: '12'
       - name: Prepare
         run: |
-          ls -al $CHROMEWEBDRIVER
-#          env CHROMEDRIVER_FILEPATH=$CHROMEWEBDRIVER npm ci
-#      - name: Lint
-#        run: npm run lint
-#      - name: Build
-#        run: npm run build
-#      - name: Unit Test
-#        run: npm run test:spec
-#      - name: Integration Test (Local)
-#        run: npm run test:e2e:browser
+          env CHROMEDRIVER_FILEPATH=$CHROMEWEBDRIVER/chromedriver npm ci
+      - name: Lint
+        run: npm run lint
+      - name: Build
+        run: npm run build
+      - name: Unit Test
+        run: npm run test:spec
+      - name: Integration Test (Local)
+        run: npm run test:e2e:browser
 #      - name: Integration Test (BrowserStack)
 #        run: npm run test:e2e:browserstack
 #        env:
