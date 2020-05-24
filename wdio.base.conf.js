@@ -34,4 +34,3 @@ exports.config = {
     ]
   },
 };
-

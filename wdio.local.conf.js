@@ -10,6 +10,6 @@ exports.config = {
     ['chromedriver'],
   ],
   capabilities: [{
-    "browserName": "chrome",
+    'browserName': 'chrome',
   }],
-}
+};
