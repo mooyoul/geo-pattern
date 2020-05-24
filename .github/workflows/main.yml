@@ -20,8 +20,9 @@ jobs:
         run: npm run test:spec
       - name: Integration Test (Local)
         run: npm run test:e2e:browser
-      - uses: actions/upload-artifact@v2
-        if: failure()
+      - name: Upload Test Artifacts
+        uses: actions/upload-artifact@v2
+        if: always()
         with:
           name: outputs
           path: output
