@@ -85,10 +85,10 @@ function DownloadButton(props: BackgroundProps) {
       style={{
         display: 'block',
         width: '100%',
-        height: '48px',
-        lineHeight: '48px',
-        padding: '0 20px',
-        fontSize: '20px',
+        height: '4rem',
+        lineHeight: '4rem',
+        padding: '0 1.66rem',
+        fontSize: '1.66rem',
         textAlign: 'center',
         color: '#333',
         background: 'none #fff',
@@ -130,6 +130,8 @@ function App() {
         className="setting"
         style={{
           position: 'fixed',
+          width: '80%',
+          maxWidth: '640px',
           left: '50%',
           top: '50%',
           transform: 'translate(-50%, -50%)',
@@ -155,7 +157,6 @@ function App() {
           />
         </div>
         <div style={{
-          display: 'inline-block',
           textAlign: 'left',
           fontSize: '14px',
         }}
