@@ -1,0 +1,36 @@
+name: gh-pages
+on:
+  push:
+    branches:
+      - 'master'
+    paths:
+      - 'package.json'
+      - 'examples/browser/**'
+jobs:
+  job:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+      - name: Prepare
+        run: |
+          env CHROMEDRIVER_FILEPATH=$CHROMEWEBDRIVER/chromedriver npm ci
+      - name: Build
+        run: npm run build
+      - name: Prepare
+        working-directory: examples/browser
+        run: npm ci
+      - name: Build
+        working-directory: examples/browser
+        run: npm run build:prod
+      - name: Publish
+        run: |
+          rm -rf dist
+          cp -r examples/browser/dist docs
+          git add docs
+          git commit -m "Publish ${{ github.sha }} to gh-pages"
+          git push origin master
+
