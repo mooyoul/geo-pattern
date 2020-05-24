@@ -22,14 +22,14 @@ jobs:
         run: npm run test:e2e:node
       - name: Integration Test (Local Browser)
         run: npm run test:e2e:browser
+      - name: Integration Test (BrowserStack)
+        run: npm run test:e2e:browserstack
+        env:
+          BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
+          BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
       - name: Upload Test Artifacts
         uses: actions/upload-artifact@v2
         if: always()
         with:
           name: outputs
           path: output
-#      - name: Integration Test (BrowserStack)
-#        run: npm run test:e2e:browserstack
-#        env:
-#          BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
-#          BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
