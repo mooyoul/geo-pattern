@@ -127,6 +127,14 @@ $ npm run build
 
 ## Related
 
+TBD
+
+## Diagram
+
+![Dependency Graph](./assets/graph.png)
+
+![Dependency Graph](./assets/graph.svg)
+
 ## License
 [MIT](LICENSE)
 
