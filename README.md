@@ -1,9 +1,9 @@
-# geo-pattern
+# @prescott/geo-pattern
 
 [![Build Status](https://github.com/mooyoul/geo-pattern/workflows/workflow/badge.svg)](https://github.com/mooyoul/geo-pattern/actions)
 [![Github Pages Status](https://github.com/mooyoul/geo-pattern/workflows/gh-pages/badge.svg)](https://github.com/mooyoul/geo-pattern/actions)
 [![Semantic Release enabled](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
-![npm bundle size (minified)](https://img.shields.io/bundlephobia/min/geo-pattern.svg)
+![npm bundle size (minified, gzipped)](https://img.shields.io/bundlephobia/minzip/@prescott/geo-pattern.svg)
 [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
 [![MIT license](http://img.shields.io/badge/license-MIT-blue.svg)](http://mooyoul.mit-license.org/)
 
@@ -34,7 +34,7 @@ Android Chrome Latest | [![BrowserStack Status](https://automate.browserstack.co
 ## Getting Started
 
 ```bash
-$ npm install geo-pattern --save
+$ npm install @prescott/geo-pattern --save
 ```
 
 ## API
@@ -100,6 +100,10 @@ Native build uses browser built-in hash function (Crypto Subtle API)
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.6.5/core.min.js"></script>
 <script type="text/javascript" src="https://unpkg.com/geo-pattern/browser/es5"></script>
 ```
+
+## Wishlists
+
+- Smaller library size
 
 ## Changelog
 
