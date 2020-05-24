@@ -18,7 +18,9 @@ jobs:
         run: npm run build
       - name: Unit Test
         run: npm run test:spec
-      - name: Integration Test (Local)
+      - name: Integration Test (Node)
+        run: npm run test:e2e:node
+      - name: Integration Test (Local Browser)
         run: npm run test:e2e:browser
       - name: Upload Test Artifacts
         uses: actions/upload-artifact@v2
