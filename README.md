@@ -61,7 +61,7 @@ interface Pattern {
 
 ```typescript
 
-import { generate } from "geo-pattern";
+import { generate } from "@prescott/geo-pattern";
 const pattern = await generate({ input: "lorem ipsum" });
 const svg = pattern.toSVG();
 const dataUri = pattern.toDataURL();
@@ -69,7 +69,7 @@ const dataUri = pattern.toDataURL();
 
 ## Browser Builds
 
-geo-pattern provides browser builds.
+`@prescott/geo-pattern` provides browser builds.
 
 All browser builds require Promise, Map, Set, and TextEncoder. 
 You should polyfill missing features if you need to support legacy browsers.  
@@ -87,18 +87,18 @@ Currently, There are four types of Browser Build.
 
 Native build uses browser built-in hash function (Crypto Subtle API)  
 
-#### Use geo-pattern using unpkg
+#### Use `@prescott/geo-pattern` using unpkg
 
 ```html
 <!-- ES6 Target Build -->
-<script type="text/javascript" src="https://unpkg.com/geo-pattern/browser/es6"></script>
+<script type="text/javascript" src="https://unpkg.com/@prescott/geo-pattern/browser/es6"></script>
 
 <!-- Native Build -->
-<script type="text/javascript" src="https://unpkg.com/geo-pattern/browser/native"></script>
+<script type="text/javascript" src="https://unpkg.com/@prescott/geo-pattern/browser/native"></script>
 
 <!-- ES5 Target Build (for Compat, requires Promise, Map, Set, and TextEncoder polyfill -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.6.5/core.min.js"></script>
-<script type="text/javascript" src="https://unpkg.com/geo-pattern/browser/es5"></script>
+<script type="text/javascript" src="https://unpkg.com/@prescott/geo-pattern/browser/es5"></script>
 ```
 
 ## Wishlists
@@ -121,7 +121,7 @@ $ npm run test:e2e:browserstack # for Browser compability test using BrowserStac
 
 [![BrowserStack Logo](/assets/browserstack.png)](https://www.browserstack.com/)
 
-geo-pattern uses [BrowserStack](https://www.browserstack.com/) for compatibility testing.
+`@prescott/geo-pattern` uses [BrowserStack](https://www.browserstack.com/) for compatibility testing.
 
 ## Build
 
