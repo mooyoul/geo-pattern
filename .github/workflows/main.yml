@@ -1,0 +1,28 @@
+name: workflow
+on: push
+jobs:
+  job:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+      - name: Prepare
+        run: npm ci
+        env:
+          CHROMEDRIVER_SKIP_DOWNLOAD: true
+      - name: Lint
+        run: npm run lint
+      - name: Build
+        run: npm run build
+      - name: Unit Test
+        run: npm run test:spec
+      - name: Integration Test (Local)
+        run: npm run test:e2e:browser
+      - name: Integration Test (BrowserStack)
+        run: npm run test:e2e:browserstack
+        env:
+          BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
+          BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
