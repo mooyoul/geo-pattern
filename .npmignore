@@ -1,4 +1,5 @@
 .idea
+.github
 *.tgz
 *.log
 src
@@ -8,6 +9,7 @@ test
 integration-test
 output
 assets
+examples
 
 arkit*
 rollup*
