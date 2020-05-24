@@ -1,0 +1,22 @@
+{
+  "$schema": "https://arkit.pro/schema.json",
+  "excludePatterns": ["**/__test__/**", "test/**", "spec/**", "**/*.test.*", "**/*.spec.*", "node_modules/*"],
+  "components": [
+    {
+      "type": "Library",
+      "patterns": ["src/**/*.ts"],
+      "excludePatterns": ["src/browser.ts", "src/adapter.ts", "src/adapters/**/*.ts", "src/processing.ts"]
+    }
+  ],
+  "output": [
+    {
+      "path": "graph.svg",
+      "groups": [
+        {
+          "type": "Library",
+          "first": true
+        }
+      ]
+    }
+  ]
+}
