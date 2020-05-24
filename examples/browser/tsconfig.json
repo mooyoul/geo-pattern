@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+        "jsx": "react",
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "sourceMap": true
+    }
+}
