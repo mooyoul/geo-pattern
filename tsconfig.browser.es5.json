@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "module": "es2015",
+        "target": "es5",
+        "noImplicitAny": true,
+        "esModuleInterop": true,
+        "declaration": false,
+        "sourceMap": true,
+        "strictNullChecks": true,
+        "lib": [
+            "dom",
+            "es2015"
+        ]
+    },
+    "include": [
+        "src/**/*.ts"
+    ]
+}

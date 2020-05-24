@@ -1,0 +1,107 @@
+{
+  "name": "geo-pattern",
+  "version": "1.0.0",
+  "description": "Create beautiful generative geometric background images from a string.",
+  "main": "dist/browser.js",
+  "types": "types/index.d.ts",
+  "browser": "dist/browser.js",
+  "dependencies": {
+    "color": "^3.1.2",
+    "tiny-sha1": "^0.2.1"
+  },
+  "devDependencies": {
+    "@prescott/commitlint-preset": "1.0.0",
+    "@prescott/semantic-release-config": "1.0.0",
+    "@prescott/tslint-preset": "1.0.0",
+    "@rollup/plugin-commonjs": "12.0.0",
+    "@rollup/plugin-node-resolve": "8.0.0",
+    "@rollup/plugin-typescript": "4.1.2",
+    "@types/chai": "4.2.11",
+    "@types/color": "3.0.1",
+    "@types/common-tags": "1.8.0",
+    "@types/debug": "4.1.5",
+    "@types/env-ci": "3.1.0",
+    "@types/jsdom": "16.2.3",
+    "@types/mocha": "7.0.2",
+    "@types/node": "12.12.42",
+    "@types/selenium-webdriver": "4.0.9",
+    "@types/sharp": "0.25.0",
+    "@types/sinon": "9.0.4",
+    "@wdio/browserstack-service": "6.1.10",
+    "@wdio/cli": "6.1.12",
+    "@wdio/local-runner": "6.1.12",
+    "@wdio/mocha-framework": "6.1.8",
+    "@wdio/spec-reporter": "6.1.12",
+    "@wdio/static-server-service": "6.0.16",
+    "axios": "0.19.2",
+    "browserstack-local": "1.4.5",
+    "chai": "4.2.0",
+    "chai-image": "1.1.1",
+    "chromedriver": "83.0.0",
+    "common-tags": "1.8.0",
+    "debug": "4.1.1",
+    "env-ci": "5.0.2",
+    "execa": "4.0.2",
+    "husky": "4.2.5",
+    "jsdom": "16.2.2",
+    "mocha": "7.2.0",
+    "rollup": "2.10.9",
+    "semantic-release": "17.0.7",
+    "sharp": "0.25.3",
+    "sinon": "9.0.2",
+    "ts-node": "8.10.1",
+    "tslib": "2.0.0",
+    "tslint": "6.1.2",
+    "typescript": "3.9.3",
+    "wdio-chromedriver-service": "6.0.3",
+    "webdriverio": "6.1.12"
+  },
+  "scripts": {
+    "clean": "rm -rf types dist",
+    "build": "npm run clean && tsc -p tsconfig.node.json && rollup -c rollup.config.js",
+    "prepublishOnly": "npm run build",
+    "pretest": "npm run clean && npm run build && npm run seed",
+    "test": "npm run test:spec && npm run test:e2e",
+    "test:spec": "mocha -r ts-node/register 'test/**/*.spec.ts'",
+    "test:e2e": "npm run test:e2e:node && npm run test:e2e:browser && npm run test:e2e:browserstack",
+    "test:e2e:node": "mocha -r ts-node/register 'integration-test/node/**/*.ts'",
+    "test:e2e:browser": "wdio wdio.local.conf.js",
+    "test:e2e:browserstack": "wdio wdio.browserstack.conf.js",
+    "posttest": "npm run clean",
+    "lint": "tslint -c tslint.json '{src,test,integration-test}/**/*.ts'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mooyoul/geo-pattern.git"
+  },
+  "keywords": [
+    "image",
+    "pattern",
+    "svg",
+    "geo-pattern",
+    "geopattern",
+    "design",
+    "background"
+  ],
+  "author": "MooYeol Prescott Lee <mooyoul@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mooyoul/geo-pattern/issues"
+  },
+  "homepage": "https://github.com/mooyoul/geo-pattern#readme",
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@prescott/commitlint-preset"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "module": "es2015",
+        "target": "es2019",
+        "noImplicitAny": true,
+        "esModuleInterop": true,
+        "declaration": false,
+        "sourceMap": true,
+        "strictNullChecks": true,
+        "lib": [
+            "dom"
+        ]
+    },
+    "include": [
+        "src/**/*.ts"
+    ]
+}
