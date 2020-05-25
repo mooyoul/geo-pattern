@@ -12,6 +12,9 @@
 
 Create beautiful generative geometric background images from a string ✨
 
+`@prescott/geo-pattern` has [visual regression tests](./test) 
+and [perfectly matches](https://github.com/mooyoul/geo-pattern/blob/master/integration-test/node/node.e2e.ts#L20) to [the original geo-pattern gem outputs](https://github.com/mooyoul/geo-pattern/blob/master/fixtures/generate.ts)!     
+
 ## Live Demo
 
 https://mooyoul.github.io/geo-pattern/
@@ -138,6 +141,13 @@ TBD
 ![Dependency Graph](./assets/graph.png)
 
 ![Dependency Graph](./assets/graph.svg)
+
+## Credits
+
+geo-pattern was originally wrote by [Jason Long](https://github.com/jasonlong). 
+It can't be done without his efforts.
+
+Kudos for his amazing work! <3 
 
 ## License
 [MIT](LICENSE)
