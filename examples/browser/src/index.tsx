@@ -2,8 +2,8 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
 /* eslint-disable */
-import { generate as GenerateFunction, Pattern } from '../../../types/browser';
-const generate = require('../../../browser/es5').generate as typeof GenerateFunction;
+import { generate as GenerateFunction, Pattern } from '@prescott/geo-pattern/types/browser';
+const generate = require('@prescott/geo-pattern/browser/es5').generate as typeof GenerateFunction;
 /* eslint-enable */
 
 type InputChangeEvent = React.ChangeEvent<HTMLInputElement>;

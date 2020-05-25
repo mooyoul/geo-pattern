@@ -17,11 +17,6 @@ jobs:
         with:
           node-version: '12'
       - name: Prepare
-        run: |
-          env CHROMEDRIVER_FILEPATH=$CHROMEWEBDRIVER/chromedriver npm ci
-      - name: Build
-        run: npm run build
-      - name: Prepare
         working-directory: examples/browser
         run: npm ci
       - name: Build
