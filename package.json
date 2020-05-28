@@ -27,12 +27,12 @@
     "@types/selenium-webdriver": "4.0.9",
     "@types/sharp": "0.25.0",
     "@types/sinon": "9.0.4",
-    "@wdio/browserstack-service": "6.1.10",
-    "@wdio/cli": "6.1.12",
-    "@wdio/local-runner": "6.1.12",
-    "@wdio/mocha-framework": "6.1.8",
-    "@wdio/spec-reporter": "6.1.12",
-    "@wdio/static-server-service": "6.0.16",
+    "@wdio/browserstack-service": "6.1.15",
+    "@wdio/cli": "6.1.15",
+    "@wdio/local-runner": "6.1.14",
+    "@wdio/mocha-framework": "6.1.14",
+    "@wdio/spec-reporter": "6.1.14",
+    "@wdio/static-server-service": "6.1.14",
     "axios": "0.19.2",
     "browserstack-local": "1.4.5",
     "chai": "4.2.0",
@@ -54,7 +54,7 @@
     "tslint": "6.1.2",
     "typescript": "3.9.3",
     "wdio-chromedriver-service": "6.0.3",
-    "webdriverio": "6.1.12"
+    "webdriverio": "6.1.14"
   },
   "scripts": {
     "clean": "rm -rf types dist browser",
