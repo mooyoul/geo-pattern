@@ -2,7 +2,7 @@
   "name": "@prescott/geo-pattern",
   "version": "1.0.0",
   "description": "Create beautiful generative geometric background images from a string.",
-  "main": "dist/browser.js",
+  "main": "dist/index.js",
   "types": "types/index.d.ts",
   "browser": "dist/browser.js",
   "dependencies": {
