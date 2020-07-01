@@ -11,7 +11,7 @@
     "tiny-sha1": "^0.2.1"
   },
   "devDependencies": {
-    "@prescott/commitlint-preset": "1.0.0",
+    "@prescott/commitlint-preset": "1.0.1",
     "@prescott/semantic-release-config": "1.0.0",
     "@prescott/tslint-preset": "1.0.0",
     "@rollup/plugin-commonjs": "13.0.0",
