@@ -45,7 +45,7 @@
     "husky": "4.2.5",
     "jsdom": "16.2.2",
     "mocha": "8.0.1",
-    "rollup": "2.18.1",
+    "rollup": "2.18.2",
     "semantic-release": "17.1.1",
     "sharp": "0.25.4",
     "sinon": "9.0.2",
