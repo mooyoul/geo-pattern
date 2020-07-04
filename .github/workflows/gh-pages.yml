@@ -3,7 +3,12 @@ on:
   push:
     branches:
       - '*'
-    pull_request:
+    paths:
+      - '.github/workflows/gh-pages.yml' # on workflow configuration change
+      - 'package.json' # on package update
+      - 'examples/browser/**' # on example update
+  pull_request:
+    branches:
       - '*'
     paths:
       - '.github/workflows/gh-pages.yml' # on workflow configuration change
