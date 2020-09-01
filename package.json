@@ -13,7 +13,7 @@
   "devDependencies": {
     "@prescott/commitlint-preset": "1.0.1",
     "@prescott/semantic-release-config": "1.0.0",
-    "@prescott/tslint-preset": "1.0.0",
+    "@prescott/tslint-preset": "1.0.1",
     "@rollup/plugin-commonjs": "14.0.0",
     "@rollup/plugin-node-resolve": "8.4.0",
     "@rollup/plugin-typescript": "5.0.2",
