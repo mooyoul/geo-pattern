@@ -24,7 +24,7 @@
     "@types/jsdom": "16.2.5",
     "@types/mocha": "8.0.3",
     "@types/node": "12.19.3",
-    "@types/selenium-webdriver": "4.0.9",
+    "@types/selenium-webdriver": "4.0.10",
     "@types/sharp": "0.26.0",
     "@types/sinon": "9.0.8",
     "@wdio/browserstack-service": "6.6.7",
