@@ -37,7 +37,7 @@
     "browserstack-local": "1.4.8",
     "chai": "4.2.0",
     "chai-image": "2.0.0",
-    "chromedriver": "84.0.1",
+    "chromedriver": "86.0.0",
     "common-tags": "1.8.0",
     "debug": "4.2.0",
     "env-ci": "5.0.2",
