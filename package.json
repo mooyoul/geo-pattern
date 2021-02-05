@@ -35,7 +35,7 @@
     "@wdio/static-server-service": "6.6.0",
     "axios": "0.21.1",
     "browserstack-local": "1.4.8",
-    "chai": "4.2.0",
+    "chai": "4.3.0",
     "chai-image": "2.0.0",
     "chromedriver": "84.0.1",
     "common-tags": "1.8.0",
