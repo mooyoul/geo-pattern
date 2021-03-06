@@ -44,7 +44,7 @@
     "execa": "4.1.0",
     "husky": "4.3.8",
     "jsdom": "16.4.0",
-    "mocha": "8.3.0",
+    "mocha": "8.3.1",
     "rollup": "2.40.0",
     "semantic-release": "17.4.1",
     "sharp": "0.27.2",
