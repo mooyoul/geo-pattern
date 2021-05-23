@@ -43,7 +43,7 @@
     "env-ci": "5.0.2",
     "execa": "4.1.0",
     "husky": "4.3.8",
-    "jsdom": "16.5.3",
+    "jsdom": "16.6.0",
     "mocha": "8.4.0",
     "rollup": "2.49.0",
     "semantic-release": "17.4.3",
