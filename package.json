@@ -46,7 +46,7 @@
     "jsdom": "16.6.0",
     "mocha": "8.4.0",
     "rollup": "2.51.2",
-    "semantic-release": "17.4.3",
+    "semantic-release": "17.4.4",
     "sharp": "0.28.3",
     "sinon": "9.2.4",
     "ts-node": "9.1.1",
