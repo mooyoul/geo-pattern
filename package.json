@@ -18,7 +18,7 @@
     "@rollup/plugin-node-resolve": "13.0.0",
     "@rollup/plugin-typescript": "8.2.1",
     "@types/chai": "4.2.19",
-    "@types/common-tags": "1.8.0",
+    "@types/common-tags": "1.8.1",
     "@types/debug": "4.1.6",
     "@types/env-ci": "3.1.0",
     "@types/jsdom": "16.2.13",
