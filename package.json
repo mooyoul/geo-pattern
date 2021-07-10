@@ -23,7 +23,7 @@
     "@types/env-ci": "3.1.0",
     "@types/jsdom": "16.2.13",
     "@types/mocha": "8.2.3",
-    "@types/node": "12.20.15",
+    "@types/node": "12.20.16",
     "@types/selenium-webdriver": "4.0.14",
     "@types/sharp": "0.28.3",
     "@types/sinon": "10.0.2",
