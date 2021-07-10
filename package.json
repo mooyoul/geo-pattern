@@ -20,7 +20,7 @@
     "@types/chai": "4.2.21",
     "@types/common-tags": "1.8.1",
     "@types/debug": "4.1.6",
-    "@types/env-ci": "3.1.0",
+    "@types/env-ci": "3.1.1",
     "@types/jsdom": "16.2.13",
     "@types/mocha": "8.2.3",
     "@types/node": "12.20.16",
