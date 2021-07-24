@@ -19,7 +19,7 @@
     "@rollup/plugin-typescript": "8.2.3",
     "@types/chai": "4.2.21",
     "@types/common-tags": "1.8.1",
-    "@types/debug": "4.1.6",
+    "@types/debug": "4.1.7",
     "@types/env-ci": "3.1.1",
     "@types/jsdom": "16.2.13",
     "@types/mocha": "9.0.0",
