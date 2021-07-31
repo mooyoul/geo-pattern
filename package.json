@@ -25,7 +25,7 @@
     "@types/mocha": "9.0.0",
     "@types/node": "12.20.17",
     "@types/selenium-webdriver": "4.0.15",
-    "@types/sharp": "0.28.4",
+    "@types/sharp": "0.28.5",
     "@types/sinon": "10.0.2",
     "@wdio/browserstack-service": "6.6.7",
     "@wdio/cli": "6.6.7",
