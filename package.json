@@ -16,7 +16,7 @@
     "@prescott/tslint-preset": "1.0.1",
     "@rollup/plugin-commonjs": "21.0.0",
     "@rollup/plugin-node-resolve": "13.0.5",
-    "@rollup/plugin-typescript": "8.2.5",
+    "@rollup/plugin-typescript": "8.3.0",
     "@types/chai": "4.2.22",
     "@types/common-tags": "1.8.1",
     "@types/debug": "4.1.7",
