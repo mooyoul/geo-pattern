@@ -48,7 +48,7 @@
     "rollup": "2.59.0",
     "semantic-release": "18.0.0",
     "sharp": "0.29.2",
-    "sinon": "11.1.2",
+    "sinon": "12.0.1",
     "ts-node": "10.4.0",
     "tslib": "2.3.1",
     "tslint": "6.1.3",
