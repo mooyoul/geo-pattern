@@ -38,7 +38,7 @@
     "chai": "4.3.4",
     "chai-image": "3.0.0",
     "chromedriver": "95.0.0",
-    "common-tags": "1.8.0",
+    "common-tags": "1.8.1",
     "debug": "4.3.2",
     "env-ci": "5.4.1",
     "execa": "5.1.1",
