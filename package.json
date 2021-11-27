@@ -39,7 +39,7 @@
     "chai-image": "3.0.0",
     "chromedriver": "96.0.0",
     "common-tags": "1.8.2",
-    "debug": "4.3.2",
+    "debug": "4.3.3",
     "env-ci": "5.4.1",
     "execa": "6.0.0",
     "husky": "7.0.4",
