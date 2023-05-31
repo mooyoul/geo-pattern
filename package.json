@@ -17,7 +17,7 @@
     "@rollup/plugin-commonjs": "21.1.0",
     "@rollup/plugin-node-resolve": "13.3.0",
     "@rollup/plugin-typescript": "8.5.0",
-    "@types/chai": "4.3.4",
+    "@types/chai": "4.3.5",
     "@types/common-tags": "1.8.1",
     "@types/debug": "4.1.7",
     "@types/env-ci": "3.1.1",
