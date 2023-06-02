@@ -34,7 +34,7 @@
     "@wdio/spec-reporter": "8.8.0",
     "@wdio/static-server-service": "8.8.0",
     "axios": "0.27.2",
-    "browserstack-local": "1.5.1",
+    "browserstack-local": "1.5.3",
     "chai": "4.3.7",
     "chai-image": "3.0.0",
     "chromedriver": "96.0.0",
