@@ -33,7 +33,7 @@
     "@wdio/mocha-framework": "8.10.7",
     "@wdio/spec-reporter": "8.10.6",
     "@wdio/static-server-service": "8.10.6",
-    "axios": "0.27.2",
+    "axios": "1.4.0",
     "browserstack-local": "1.5.3",
     "chai": "4.3.7",
     "chai-image": "3.0.0",
